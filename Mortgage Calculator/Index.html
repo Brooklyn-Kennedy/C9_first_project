@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Loan Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="theme-switcher-box">
+            <h1 class="theme-switcher-title">Theme Switcher</h1>
+            <div class="theme-buttons flex gap-2">
+                <button class="default bg-white text-black px-4 py-2 rounded" onclick="setDefaultTheme()" data-description="Switch to Default Theme">Default</button>
+                <button class="dark-mode bg-black text-white px-4 py-2 rounded" onclick="setDarkMode()" data-description="Switch to Dark Mode">Dark Mode</button>
+                <button class="high-contrast bg-yellow-400 text-black px-4 py-2 rounded" onclick="setHighContrast()" data-description="Switch to High Contrast Theme">High Contrast</button>
+                <button class="cool-tones bg-blue-700 text-white px-4 py-2 rounded" onclick="setCoolTones()" data-description="Switch to Cool Tones Theme">Cool Tones</button>
+            </div>
+            <div class="font-selector">
+                <label for="font-select">Choose Font:</label>
+                <select id="font-select" onchange="changeFont()">
+                    <option value="Arial">Arial</option>
+                    <option value="Comic Sans MS">Comic Sans</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Century Gothic">Century Gothic</option>
+                    <option value="Calibri">Calibri</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main calculator container -->
+    <div class="calculator-container">
+        <div class="calculator">
+            <h1>Mortgage Calculator</h1>
+            <div class="form-group">
+                <label for="loan-amount">Loan Amount (£):</label>
+                <input type="number" id="loan-amount" placeholder="Enter loan amount">
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Annual Interest Rate (%):</label>
+                <input type="number" id="interest-rate" placeholder="Enter interest rate">
+            </div>
+            <div class="form-group">
+                <label for="loan-term">Loan Term (years):</label>
+                <input type="number" id="loan-term" placeholder="Enter loan term">
+            </div>
+            <div class="form-group">
+                <label for="loan-type">Loan Type:</label>
+                <select id="loan-type">
+                    <option value="fixed">Fixed Rate</option>
+                    <option value="interest-only">Interest Only</option>
+                </select>
+            </div>
+            <button class="btn" onclick="calculateMortgage()">Calculate</button>
+            <button class="btn" onclick="clearForm()">Clear</button>
+            <div class="results" id="results" style="display: none;">
+                <p id="monthly-payment"></p>
+                <p id="total-payment"></p>
+                <p id="total-interest"></p>
+                <p id="interest-only"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Theme switcher buttons (always visible with their theme color) */
+.theme-buttons button.default {
+    background-color: white;
+    color: black;
+}
+
+.theme-buttons button.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.theme-buttons button.high-contrast {
+    background-color: #ffeb3b;
+    color: black;
+}
+
+.theme-buttons button.cool-tones {
+    background-color: #1e2b3b;
+    color: #a8c9e9;
+}
+
+/* Calculator container */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 120px;  /* Ensure the content is below the fixed header */
+}
+
+/* Calculator */
+.calculator {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.calculator h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Button and input styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Results */
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Default Theme */
+body.default-theme {
+    background-color: white;
+    color: black;
+}
+
+body.default-theme .calculator {
+    background: #fff;
+    color: black;
+}
+
+body.default-theme .calculator h1 {
+    color: black;
+}
+
+body.default-theme .results {
+    background: #f8f9fa;
+}
+
+body.default-theme .form-group input,
+body.default-theme .form-group select {
+    background-color: #f4f4f4;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .calculator {
+    background: #444;
+    color: white;
+}
+
+body.dark-mode .calculator h1 {
+    color: white;
+}
+
+body.dark-mode .results {
+    background: #555;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+    background-color: #666;
+    color: white;
+}
+
+/* High Contrast */
+body.high-contrast {
+    background-color: black;
+    color: yellow;
+}
+
+body.high-contrast .calculator {
+    background: #222;
+    color: yellow;
+}
+
+body.high-contrast .calculator h1 {
+    color: yellow;
+}
+
+body.high-contrast .results {
+    background: #333;
+}
+
+body.high-contrast .form-group input,
+body.high-contrast .form-group select {
+    background-color: #444;
+    color: yellow;
+}
+
+/* Cool Tones */
+body.cool-tones {
+    background-color: #2a3d66;
+    color: #a8c9e9;
+}
+
+body.cool-tones .calculator {
+    background: #3c5575;
+    color: #a8c9e9;
+}
+
+body.cool-tones .calculator h1 {
+    color: #a8c9e9;
+}
+
+body.cool-tones .results {
+    background: #4a6f8a;
+}
+
+body.cool-tones .form-group input,
+body.cool-tones .form-group select {
+    background-color: #506c8c;
+    color: #a8c9e9;
+}
+
+body.cool-tones .btn {
+    background-color: #1e2b3b;
+    color: #a8c9e9;
+}
+
+body.cool-tones .btn:hover {
+    background-color: #283f5b;
+}
+
+/* Font Selector */
+.font-selector {
+    margin-top: 15px;
+}
+
+.font-selector label {
+    font-weight: bold;
+    margin-right: 10px;
+}
